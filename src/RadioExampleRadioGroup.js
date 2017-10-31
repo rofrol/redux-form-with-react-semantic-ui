@@ -6,42 +6,22 @@ import RadioComponent from './components/RadioComponent';
 class RadioExampleRadioGroup extends Component {
   state = {}
   handleChange = (e, { value }) => this.setState({ value })
-  
+
   render() {
     return (
       <Form>
-      <Form.Field>
-      Selected value: <b>{this.state.value}</b>
-      </Form.Field>
-      <Form.Field>
-      <Field
-      component={Radio}
-      label='Choose this'
-      name='radioGroup'
-      value='this'
-      checked={this.state.value === 'this'}
-      onChange={this.handleChange}
-      />
-      </Form.Field>
-      <Form.Field>
-      <Field
-      component={Radio}
-      label='Or that'
-      name='radioGroup'
-      value='that'
-      checked={this.state.value === 'that'}
-      onChange={this.handleChange}
-      />
-      </Form.Field>
-      <Field
-      component={RadioComponent}
-      name="someradio"
-      />
-      <Field
-      name="somename1"
-      radioValue={1}
-      component={RadioComponent}
-      />
+        <Field
+          name="somename1"
+          label="some label"
+          radioValue="1"
+          component={RadioComponent}
+        />
+        <Field
+          name="somename1"
+          label="some label 2"
+          radioValue="2"
+          component={RadioComponent}
+        />
       </Form>
     )
   }
