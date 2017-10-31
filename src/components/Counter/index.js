@@ -4,7 +4,7 @@ import Counter from './Counter';
 
 
 const mapStateToProps = state => ({
-    value: state,
+    value: state.reducer.counter,
 });
 
 const mapDispatchToProps = dispatch => ({

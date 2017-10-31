@@ -18,6 +18,9 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "babel-eslint": "^8.0.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-react": "^7.4.0",
     "redux-devtools-extension": "^2.13.2"
   }
 }
