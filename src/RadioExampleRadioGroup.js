@@ -11,6 +11,7 @@ class RadioExampleRadioGroup extends Component {
   render() {
     return (
       <Form>
+        this.state.hasParentCompany: {JSON.stringify(this.state.hasParentCompany)}
         <Field
           name="somename1"
           label="some label"
@@ -28,6 +29,11 @@ class RadioExampleRadioGroup extends Component {
           label="This company has subsidiaries"
           name="hasSubsidiaries"
         />
+        <CheckboxInput
+            label="This company has a parent company"
+            name="hasParentCompany"
+            onChange={(e, { checked }) => this.setState({ hasParentCompany: checked })}
+          />
       </Form>
     )
   }

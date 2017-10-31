@@ -2,20 +2,18 @@ import React from 'react';
 import { Checkbox } from 'semantic-ui-react';
 
 const CheckboxInput = (props) => {
-  const { disabled, label, name, checkboxValue, defaultChecked, checked, onClick, value, input } = props;
+  const { disabled, label, name, defaultChecked, onChange, input } = props;
   console.log(props);
   let checkboxProps;
   if (input) {
     checkboxProps = {
-      label,
-      onChange: (event, {checked}) => input.onChange(checked),
-      checked: input.value ? true : false,
+      onChange: (event, { checked }) => input.onChange(checked),
+      checked: !!input.value,
     };
   } else {
     checkboxProps = {
-      label,
-      checked,
-      onClick,
+      onChange,
+      defaultChecked,
     };
   }
   return (
