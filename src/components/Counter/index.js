@@ -8,10 +8,6 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-    // getCompanyInfo: (payload: { companyId: number }) => dispatch(getCompanyInfo(payload)),
-    // searchCompanyByName: (payload: CompanySearchPayloadType) => dispatch(searchCompanyByName(payload)),
-    // setCompany: (payload: string) => dispatch(setCompany(payload)),
-    // resetFoundCompanies: () => dispatch(resetFoundCompanies()),
     onIncrement: () => dispatch({ type: 'INCREMENT' }),
     onDecrement: () => dispatch({ type: 'DECREMENT' }),
 });
