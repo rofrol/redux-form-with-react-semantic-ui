@@ -1,0 +1,66 @@
+@import "~styles/variables";
+
+.checkbox-wrapper {
+  position: relative;
+  width: 100%;
+
+  .ui.checkbox {
+
+    input {
+      margin-top: 3px;
+    }
+
+    label {
+      color: $color-outer-space;
+      font-size: 14px;
+      line-height: 24px;
+
+      &::before {
+        margin-top: 3px;
+        background-color: transparent;
+        border-radius: 3px;
+        border: 2px solid $color-ocean-green;
+      }
+
+      &::after {
+        margin-top: 3px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  .ui.checkbox input:checked~label:before {
+    background-color: transparent;
+    border-color: $color-ocean-green;
+  }
+
+  .ui.checkbox input:focus~.box:before, .ui.checkbox input:focus~label:before {
+    background-color: transparent;
+    border-color: $color-ocean-green;
+  }
+
+  .ui.checkbox input:checked~label:after {
+    background-color: $color-ocean-green;
+    border-radius: 3px;
+    color: $color-white;
+  }
+
+  .ui.radio.checkbox input:focus:checked~label:after {
+    background-color: $color-ocean-green;
+    border-radius: 3px;
+    color: $color-white;
+  }
+
+  .ui.checkbox .box:hover::before,
+  .ui.checkbox label:hover::before {
+    background-color: transparent;
+    border-color: $color-ocean-green;
+  }
+
+  .ui.checkbox input:checked:focus~.box:after,
+  .ui.checkbox input:checked:focus~label:after,
+  .ui.checkbox input:not([type=radio]):indeterminate:focus~.box:after,
+  .ui.checkbox input:not([type=radio]):indeterminate:focus~label:after {
+    color: $color-white;
+  }
+}

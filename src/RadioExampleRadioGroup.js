@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Form, Radio } from 'semantic-ui-react';
 import { Field, reduxForm } from 'redux-form';
 import RadioComponent from './components/RadioComponent';
+import CheckboxInput from './components/CheckboxInput';
 
 class RadioExampleRadioGroup extends Component {
   state = {}
@@ -21,6 +22,11 @@ class RadioExampleRadioGroup extends Component {
           label="some label 2"
           radioValue="2"
           component={RadioComponent}
+        />
+        <Field
+          component={CheckboxInput}
+          label="This company has subsidiaries"
+          name="hasSubsidiaries"
         />
       </Form>
     )

@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox Input randers Checkbox correctly 1`] = `
+<div
+  className="ui checkbox"
+  onChange={[Function]}
+  onClick={[Function]}
+  onMouseDown={[Function]}
+>
+  <input
+    checked={false}
+    className="hidden"
+    name="some name"
+    readOnly={true}
+    tabIndex={0}
+    type="checkbox"
+    value="some value"
+  />
+  <label>
+    some label
+  </label>
+</div>
+`;
